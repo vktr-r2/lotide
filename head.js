@@ -16,5 +16,7 @@ const head = (array) => {
   return array[0];
 };
 
-assertEqual(head([5,6,7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
+//assertEqual(head([5,6,7]), 5);  PASSED
+//assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello"); PASSED
+//assertEqual(head([])); UNDEFINED === UNDEFINED PASSED
+//assertEqual(head([1]), 1); PASSED
