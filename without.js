@@ -45,4 +45,12 @@ Write a test case to make sure that the original array is not modified.
 - for in loop
 - slice (Doesn't modify original array)
 - Array.prototype.filter() ??  No experience using this
+- (!contorl element)
 */
+
+
+//CODE//
+
+const without = (source, itemsToRemove) => {
+  
+}
