@@ -27,11 +27,22 @@ Write a test case to make sure that the original array is not modified.
 
 
 //PSEUDO//
-//Without function will take source array and itemsToRemove.  iTR will be used as control
-//Need nested for statements (Try without index)?
-//Need to declare empty array where answer will be pushed
-//First for statement takes elements in control array one by one
-//Second for statement checks element in source array against control array.  If not equal then push to empty array
-//Return empty array as answer
+- /Without function will take source array and itemsToRemove.  iTR will be used as control
+- Need nested for statements (Try without index)?
+- Need to declare empty array where answer will be pushed
+- First for statement takes elements in control array one by one
+- Second for statement checks element in source array against control array.  If not equal then push to empty array
+- Return empty array as answer
 
+//EDGE CASES TO TEST//
+- Enter no elements to be removed from source array
+- Enter elements that would require coercion to match, but are not identical ('1' !== 1 )
+- Provide source where all elements are to be removed
+- TEST TO MAKE SURE ORIGINAL ARRAY IS NOT ALTERED
+
+
+//TOOLS TO USE//
+- for in loop
+- slice (Doesn't modify original array)
+- Array.prototype.filter() ??  No experience using this
 */
