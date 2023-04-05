@@ -52,14 +52,28 @@ Write a test case to make sure that the original array is not modified.
 //CODE//
 
 const without = (source, itemsToRemove) => {
-  let filteredArray = source.slice();
+  let filteredArray = source;
   for (let i = 0; i < itemsToRemove.length; i++) {
     filteredArray = filteredArray.filter((element) => element !== itemsToRemove[i]);
   }
-  console.log('Source array:', source);
-  console.log('itemsToRemove array:', itemsToRemove);
   return filteredArray;
 };
 
-console.log(without(['cat', 'dog' , 'mouse', 'cat'], []));
-console.log(without([1,2,3,4,5], []));
+
+//TESTS CONDUCTED//
+const words = ["hello", "world", "lighthouse"];
+without(words, ["lighthouse"]);
+assertArraysEqual(without(words, ["lighthouse"]), ["hello", "world"]);
+//EXPECTED ASSERTION PASSED
+
+const testArray = ["hello", "world", "lighthouse", 1, 2, 3, "123"];
+assertArraysEqual(without(testArray, []), testArray);
+//EXPECTED ASSERTION PASSED
+
+const testArray1 = ["hello", "world", "lighthouse"];
+assertArraysEqual(without(testArray1, ["lighthouse","123",1,2,3]), ["hello", "world"]);
+//EXPECTED ASSERTION PASSED
+
+const testArray2 = ["hello", "world", "lighthouse"];
+assertArraysEqual(without(testArray2, testArray2), ["hello", "world", "lighthouse"]);
+//EXPECTED ASSERTION FAILED
