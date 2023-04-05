@@ -27,8 +27,8 @@ Write a test case to make sure that the original array is not modified.
 
 
 //PSEUDO//
-- /Without function will take source array and itemsToRemove.  iTR will be used as control
-- Need nested for statements (Try without index)?
+- /Without function will take source array and itemsToRemove.  iTR will be used as control DONE
+- Need nested for statements (Try for in loop)?
 - Need to declare empty array where answer will be pushed
 - First for statement takes elements in control array one by one
 - Second for statement checks element in source array against control array.  If not equal then push to empty array
@@ -52,5 +52,7 @@ Write a test case to make sure that the original array is not modified.
 //CODE//
 
 const without = (source, itemsToRemove) => {
-  
+  for (let i = 0; i < itemsToRemove.length; i++) {
+    
+  }
 }
