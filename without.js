@@ -14,3 +14,24 @@ const assertArraysEqual = (array1, array2) => {
   if (assertion === true) console.log(`🟩 🟩 Assertion Passed: array1 === array2`);
   if (assertion === false) console.log(`🔴 🔴 Assertion Failed: array1 !== array2`);
 };
+
+
+/* //TASK//
+Implement without which will return a subset of a given array, removing unwanted elements.
+
+This function should take in a source array and a itemsToRemove array. It should return a new array with only those elements from source that are not present in the itemsToRemove array.
+
+Use assertArraysEqual to write test cases for various scenarios.
+
+Write a test case to make sure that the original array is not modified.
+
+
+//PSEUDO//
+//Without function will take source array and itemsToRemove.  iTR will be used as control
+//Need nested for statements (Try without index)?
+//Need to declare empty array where answer will be pushed
+//First for statement takes elements in control array one by one
+//Second for statement checks element in source array against control array.  If not equal then push to empty array
+//Return empty array as answer
+
+*/
