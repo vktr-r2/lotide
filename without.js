@@ -35,8 +35,8 @@ Write a test case to make sure that the original array is not modified.
 - Return empty array as answer
 
 //EDGE CASES TO TEST//
-- Enter no elements to be removed from source array
-- Enter elements that would require coercion to match, but are not identical ('1' !== 1 )
+- Enter no elements to be removed from source array BUG
+- Enter elements that would require coercion to match, but are not identical ('1' !== 1 ) DONE
 - Provide source where all elements are to be removed
 - TEST TO MAKE SURE ORIGINAL ARRAY IS NOT ALTERED
 
@@ -52,11 +52,14 @@ Write a test case to make sure that the original array is not modified.
 //CODE//
 
 const without = (source, itemsToRemove) => {
-  let filteredArray = [];
+  let filteredArray = source.slice();
   for (let i = 0; i < itemsToRemove.length; i++) {
-    filteredArray = source.filter((element) => element !== itemsToRemove[i]);
+    filteredArray = filteredArray.filter((element) => element !== itemsToRemove[i]);
   }
+  console.log('Source array:', source);
+  console.log('itemsToRemove array:', itemsToRemove);
   return filteredArray;
 };
 
-console.log(without([1, 2, 3], [1]));
+console.log(without(['cat', 'dog' , 'mouse', 'cat'], []));
+console.log(without([1,2,3,4,5], []));
