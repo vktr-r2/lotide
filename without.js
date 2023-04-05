@@ -52,7 +52,11 @@ Write a test case to make sure that the original array is not modified.
 //CODE//
 
 const without = (source, itemsToRemove) => {
+  let filteredArray = [];
   for (let i = 0; i < itemsToRemove.length; i++) {
-    
+    filteredArray = source.filter((element) => element !== itemsToRemove[i]);
   }
-}
+  return filteredArray;
+};
+
+console.log(without([1, 2, 3], [1]));
