@@ -14,3 +14,5 @@ const assertArraysEqual = (array1, array2) => {
   if (assertion === true) console.log(`🟩 🟩 Assertion Passed: array1 === array2`);
   if (assertion === false) console.log(`🔴 🔴 Assertion Failed: array1 !== array2`);
 };
+
+//Use isArray() method to go through initial array.  If true iterate through array within array.
