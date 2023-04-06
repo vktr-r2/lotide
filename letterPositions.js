@@ -17,19 +17,17 @@ const assertArraysEqual = (array1, array2) => {
 
 const letterPositions = function(sentence) {
   const results = {};
-    for (i = 0; i < sentence.length; i++) {
-      if (sentence[i] === ' ');
-      if (!results[sentence[i]]) {
-        results[sentence[i]] = [];
-        results[sentence[i]].push(i);
-      }
-      if (results[sentence[i]] && !results[sentence[i]].includes(i)) {
-        results[sentence[i]].push(i);
-      }
-      console.log(results);
+  for (let i = 0; i < sentence.length; i++) {
+    if (sentence[i] === ' ') {
+
+    } else if (!results[sentence[i]]) {
+      results[sentence[i]] = [];
+      results[sentence[i]].push(i);
+    } else if (results[sentence[i]] && !results[sentence[i]].includes(i)) {
+      results[sentence[i]].push(i);
     }
+  }
   return results;
 };
 
-
-letterPositions("hello");
+assertArraysEqual(letterPositions("lighthouse in the house later than expected").e, [9, 16, 22, 27, 35, 38, 41]);
