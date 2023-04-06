@@ -20,7 +20,12 @@ const eqObjects = (object1, object2) => {
   if (Object1Keys.length !== Object2Keys.length) {
     return false;
   }
-  //console.log('Object1Keys:', Object1Keys, 'Object2Keys:', Object2Keys )
+  for (property in object1) {
+    if (object1[property] !== object2[property]) {
+      return false;
+    }
+  }
+  return true;
 };
 
 
