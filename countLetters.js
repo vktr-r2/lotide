@@ -9,28 +9,29 @@ const assertEqual = (actual, expected) => {
   }
 };
 
-//TASK//
 
-//The function should take in a sentence (as a string) and then return a count of each of the letters in that sentence.
-//For example, countLetters('LHL') should return results indicating that L appears twice, and H once.
-//this function could return an object where each unique character encountered in the string is a property of the object and the value for that property/key should be the number of occurrences for that character.
-
-//HOW//
-//How do I handle letters that I am supposed to check for, but don't appear in my string?
-
-//countLetters takes a inputString and checkLetters array
+//Declare function
 const countLetters = (inputString, checkLetters) => {
-  const letterCount = {}
+  //Declare empty object
+  const letterCount = {};
+  //For loop and if statement create properties in object with value of 0 (Allows us to handle cases where letter doesn't appear in array at all)
   for (letter of checkLetters) {
-    if (letter !== ' ')letterCount[letter] = 0
+    if (letter !== ' ') letterCount[letter] = 0;
   }
-  console.log(letterCount)
+  //For loop and if statement check if character in string exists as key in array and increments accordingly
+  for (char of inputString) {
+    if (letterCount[char] >= 0) {
+      letterCount[char] += 1;
+    }
+  }
+  return letterCount;
 };
 
-
 //TEST CODE//
-
-const string = "I am slowly getting very sleep";
+const string = "I am ssslowly getting the hang of this!";
 const check = ['a', 'b', 'e', 's'];
 
-countLetters(string,check);
+assertEqual(countLetters(string,check)["a"], 2);
+assertEqual(countLetters(string,check)["b"], 0);
+assertEqual(countLetters(string,check)["e"], 2);
+assertEqual(countLetters(string,check)["s"], 4);
