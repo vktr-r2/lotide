@@ -36,11 +36,12 @@ const eqObjects = (object1, object2) => {
 
 
 const assertObjectsEqual = (actual, expected) => {
+  const inspect = require('util').inspect;
   let assertion = eqObjects(actual, expected);
-  if (assertion === true) console.log(`🟩 🟩 Assertion Passed: ${actual} === ${expected}`);
-  if (assertion === false) console.log(`🔴 🔴 Assertion Failed: ${actual} !== ${expected}`);
+  if (assertion === true) console.log(`🟩 🟩 Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
+  if (assertion === false) console.log(`🔴 🔴 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
 }
 
 const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
-const anotherMultiColorShirtObject = { colors: ["red", "blue"], size:"large" };
+const anotherMultiColorShirtObject = { colors: ["red", "blue"], size:"medium" };
 assertObjectsEqual(multiColorShirtObject, anotherMultiColorShirtObject);
