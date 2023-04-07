@@ -2,7 +2,7 @@ const takeUntil = function(array, callback) {
   const result = [];
   for (let elm of array) {
     if (!callback(elm)) {
-    result.push(elm)
+      result.push(elm);
     } else {
       return result;
     }
