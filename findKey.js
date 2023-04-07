@@ -24,10 +24,11 @@ const assertEqual = (actual, expected) => {
 
 const findKey = (object, callback) => {
   for (let key in object) {
-    let value = object[key];
-    if (callback(value)) {
-      console.log(`Value: ${value}`)
-      console.log(`Struggling with: ${key}`);
+    //let value = object[key];
+    if (callback(object[key])) {
+      //console.log(`Value: ${value}`)
+      //console.log(`Struggling with: ${key}`);
+      console.log(key);
     }
   }
 };
