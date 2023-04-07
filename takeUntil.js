@@ -1,6 +1,13 @@
 const takeUntil = function(array, callback) {
-  // ...
-}
+  const result = [];
+  for (let elm of array) {
+    if (!callback(elm)) {
+    result.push(elm)
+    } else {
+      return result;
+    }
+  }
+};
 
 
 
@@ -15,3 +22,8 @@ console.log('---');
 const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
 const results2 = takeUntil(data2, x => x === ',');
 console.log(results2);
+
+
+// [ 1, 2, 5, 7, 2 ]
+// --
+// [ 'I\'ve', 'been', 'to', 'Hollywood' ]
