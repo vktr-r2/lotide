@@ -21,10 +21,9 @@ const assertArraysEqual = (array1, array2) => {
 const flatten = (array) => {
   const result = [];  //Declare empty array where answer will be stored
   for (element of array) { //For...of loop iterates through input array
-    if (!Array.isArray(element)) { //If current element is array, call flatten function on element
-      result.push(element); 
-    } else {  //If current element is array, call flatten function on element
-      flatten(element);
+    if (Array.isArray(element)) { //If current element is array, call flatten function on element
+      result.push(flatten(element));
+    } else {  
       result.push(element)
     }  
   }
