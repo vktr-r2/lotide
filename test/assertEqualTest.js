@@ -1,9 +1,3 @@
-// const assertEqual = require('../assertEqual');
-
-// assertEqual(2, 2);
-// assertEqual(1, 2);
-// assertEqual("2", 2);
-
 const assert = require('chai').assert;
 const assertEqual = require('../assertEqual');
 
