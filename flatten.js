@@ -15,4 +15,19 @@ const assertArraysEqual = (array1, array2) => {
   if (assertion === false) console.log(`🔴 🔴 Assertion Failed: array1 !== array2`);
 };
 
-//Use isArray() method to go through initial array.  If true iterate through array within array.
+//Implemented flatten.js using recursion
+
+
+const flatten = (array) => {
+  const result = [];  //Declare empty array where answer will be stored
+  for (element of array) { //For...of loop iterates through input array
+    if (Array.isArray(element)) { //If current element is array, call flatten function on element
+      flatten(element);
+      result.push(element)
+    }
+    result.push(element);  //If element is not array, push it to the result array
+  }
+  return result;  //Return result
+};
+
+console.log(flatten([1, 2, [3, [4]], 5, [6]]));
