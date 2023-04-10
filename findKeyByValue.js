@@ -1,13 +1,13 @@
-const assertEqual = (actual, expected) => {
-  //If statement checks if two params are identical
-  if (actual !== expected) {
-    //If FALSE, log error
-    console.log(`🔴 🔴 Assertion Failed: ${actual} !== ${expected}`);
-  } else {
-    //If TRUE, log success
-    console.log(`🟩 🟩 Assertion Passed: ${actual} === ${expected}`);
-  }
-};
+// const assertEqual = (actual, expected) => {
+//   //If statement checks if two params are identical
+//   if (actual !== expected) {
+//     //If FALSE, log error
+//     console.log(`🔴 🔴 Assertion Failed: ${actual} !== ${expected}`);
+//   } else {
+//     //If TRUE, log success
+//     console.log(`🟩 🟩 Assertion Passed: ${actual} === ${expected}`);
+//   }
+// };
 
 //Declare findKeyByValue function, takes object and value
 const findKeyByValue = (object, value) => {
@@ -22,11 +22,13 @@ const findKeyByValue = (object, value) => {
 
 
 
-const bestTVShowsByGenre = {
-  sciFi: "The Expanse",
-  comedy: "Brooklyn Nine-Nine",
-  drama:  "The Wire"
-};
+// const bestTVShowsByGenre = {
+//   sciFi: "The Expanse",
+//   comedy: "Brooklyn Nine-Nine",
+//   drama:  "The Wire"
+// };
 
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+// assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
+// assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+
+module.exports = findKeyByValue;

@@ -1,13 +1,13 @@
-const assertEqual = (actual, expected) => {
-  //If statement checks if two params are identical
-  if (actual !== expected) {
-    //If FALSE, log error
-    console.log(`🔴 🔴 Assertion Failed: ${actual} !== ${expected}`);
-  } else {
-    //If TRUE, log success
-    console.log(`🟩 🟩 Assertion Passed: ${actual} === ${expected}`);
-  }
-};
+// const assertEqual = (actual, expected) => {
+//   //If statement checks if two params are identical
+//   if (actual !== expected) {
+//     //If FALSE, log error
+//     console.log(`🔴 🔴 Assertion Failed: ${actual} !== ${expected}`);
+//   } else {
+//     //If TRUE, log success
+//     console.log(`🟩 🟩 Assertion Passed: ${actual} === ${expected}`);
+//   }
+// };
 
 
 //Declare function
@@ -28,10 +28,12 @@ const countLetters = (inputString, checkLetters) => {
 };
 
 //TEST CODE//
-const string = "I am ssslowly getting the hang of this!";
-const check = ['a', 'b', 'e', 's'];
+// const string = "I am ssslowly getting the hang of this!";
+// const check = ['a', 'b', 'e', 's'];
 
-assertEqual(countLetters(string,check)["a"], 2);
-assertEqual(countLetters(string,check)["b"], 0);
-assertEqual(countLetters(string,check)["e"], 2);
-assertEqual(countLetters(string,check)["s"], 4);
+// assertEqual(countLetters(string,check)["a"], 2);
+// assertEqual(countLetters(string,check)["b"], 0);
+// assertEqual(countLetters(string,check)["e"], 2);
+// assertEqual(countLetters(string,check)["s"], 4);
+
+module.exports = countLetters

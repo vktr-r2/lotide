@@ -1,15 +1,3 @@
-const eqArrays = (array1, array2) => {
-  //If arrays are not equal length, return false
-  if (array1.length !== array2.length) return false;
-  //Iterate through arrays with for statement
-  for (let i = 0; i < array1.length; i++) {
-    //Compare value of array1[i] to array2[i] counterpart.  If not identical return false
-    if (array1[i] !== array2[i]) return false;
-  }
-  //If function processes this far, return true
-  return true;
-};
-
 //eqObjects function checks whether two objects are identical to one another
 const eqObjects = (object1, object2) => {
   //Check to see if Object.keys array lengths are equal
@@ -35,13 +23,15 @@ const eqObjects = (object1, object2) => {
 
 
 
-const assertObjectsEqual = (actual, expected) => {
-  const inspect = require('util').inspect;
-  let assertion = eqObjects(actual, expected);
-  if (assertion === true) console.log(`🟩 🟩 Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
-  if (assertion === false) console.log(`🔴 🔴 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
-};
+// const assertObjectsEqual = (actual, expected) => {
+//   const inspect = require('util').inspect;
+//   let assertion = eqObjects(actual, expected);
+//   if (assertion === true) console.log(`🟩 🟩 Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
+//   if (assertion === false) console.log(`🔴 🔴 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
+// };
 
-const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
-const anotherMultiColorShirtObject = { colors: ["red", "blue"], size:"medium" };
-assertObjectsEqual(multiColorShirtObject, anotherMultiColorShirtObject);
+// const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
+// const anotherMultiColorShirtObject = { colors: ["red", "blue"], size:"medium" };
+// assertObjectsEqual(multiColorShirtObject, anotherMultiColorShirtObject);
+
+module.exports = eqObjects;
