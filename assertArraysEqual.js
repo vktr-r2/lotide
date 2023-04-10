@@ -1,10 +1,4 @@
-const eqArrays = (array1, array2) => {
-  if (array1.length !== array2.length) return false;
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) return false;
-  }
-  return true;
-};
+const eqArrays = require('./eqArray');
 
 //Define assertArraysEqual func, takes two arrays as params
 const assertArraysEqual = (array1, array2) => {
@@ -15,7 +9,4 @@ const assertArraysEqual = (array1, array2) => {
   if (assertion === false) console.log(`🔴 🔴 Assertion Failed: ${array1} !== ${array2}`);
 };
 
-//Test code//
-const array1 = [1,2,3];
-const array2 = [1,2,3];
-assertArraysEqual(array1, array2);
+module.exports = assertArraysEqual;
