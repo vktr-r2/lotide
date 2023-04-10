@@ -21,13 +21,14 @@ const assertArraysEqual = (array1, array2) => {
 const flatten = (array) => {
   const result = [];  //Declare empty array where answer will be stored
   for (element of array) { //For...of loop iterates through input array
-    if (Array.isArray(element)) { //If current element is array, call flatten function on element
+    if (!Array.isArray(element)) { //If current element is array, call flatten function on element
+      result.push(element); 
+    } else {  //If current element is array, call flatten function on element
       flatten(element);
       result.push(element)
-    }
-    result.push(element);  //If element is not array, push it to the result array
+    }  
   }
   return result;  //Return result
 };
 
-console.log(flatten([1, 2, [3, [4]], 5, [6]]));
+console.log(flatten([1, 2, [3, 4], 5, [6]]));
