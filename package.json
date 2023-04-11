@@ -1,7 +1,7 @@
 {
-  "name": "viktors-lotide",
+  "name": "vktr-r2",
   "version": "1.0.0",
-  "description": "Lotide project for Lighthouse Labs",
+  "description": "Lotide project for Lighthouse Labs - not for production use",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,11 @@
     "type": "git",
     "url": "git+https://github.com/vktr-r2/lotide.git"
   },
-  "author": "Viktor Ristic",
+  "author": {
+    "name" : "Viktor R",
+    "email" : "vktr-r2@protonmail.com",
+    "url" : "https://github.com/vktr-r2"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/vktr-r2/lotide/issues"
