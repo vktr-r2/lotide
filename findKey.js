@@ -1,3 +1,14 @@
+const findKey = (obj, callback) => {
+  for (let key in obj) {
+    if (callback(obj[key])) {
+      return (key);
+    }
+  }
+};
+
+module.exports = findKey
+
+
 // //Define assertEqual function, takes two params
 // const assertEqual = (actual, expected) => {
 //   //If statement checks if two params are identical
@@ -11,24 +22,16 @@
 // };
 
 //TRIAL && ERROR TESTING
-// const findKey = (object, callback) => {
-//   console.log(object);
-//   for (let key in object) {
+// const findKey = (obj, callback) => {
+//   console.log(obj);
+//   for (let key in obj) {
 //     console.log(`Key is: ${key}`);
-//     let value = object[key];
+//     let value = obj[key];
 //     console.log(callback(value));
 //     console.log(`Value: ${value}`)
 //     console.log(`Struggling with: ${key}`);
 //   }
 // };
-
-const findKey = (object, callback) => {
-  for (let key in object) {
-    if (callback(object[key])) {
-      return (key);
-    }
-  }
-};
 
 
 // assertEqual(
@@ -41,5 +44,4 @@ const findKey = (object, callback) => {
 //     "Akelarre":  { stars: 3 }
 //   }, x => x.stars === 2), "noma");
 
-module.exports = findKey
 

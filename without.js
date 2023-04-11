@@ -1,3 +1,14 @@
+const without = (arr, itemsToRemove) => {
+  let filteredArray = arr;
+  for (let i = 0; i < itemsToRemove.length; i++) {
+    filteredArray = filteredArray.filter((element) => element !== itemsToRemove[i]);
+  }
+  return filteredArray;
+};
+
+module.exports = without;
+
+
 // const eqArrays = (array1, array2) => {
 //   if (array1.length !== array2.length) return false;
 //   for (let i = 0; i < array1.length; i++) {
@@ -51,13 +62,6 @@ Write a test case to make sure that the original array is not modified.
 
 //CODE//
 
-const without = (source, itemsToRemove) => {
-  let filteredArray = source;
-  for (let i = 0; i < itemsToRemove.length; i++) {
-    filteredArray = filteredArray.filter((element) => element !== itemsToRemove[i]);
-  }
-  return filteredArray;
-};
 
 
 // //TESTS CONDUCTED//
@@ -77,5 +81,3 @@ const without = (source, itemsToRemove) => {
 // const testArray2 = ["hello", "world", "lighthouse"];
 // assertArraysEqual(without(testArray2, testArray2), ["hello", "world", "lighthouse"]);
 // //EXPECTED ASSERTION FAILED
-
-module.exports = without;

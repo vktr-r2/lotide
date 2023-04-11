@@ -1,8 +1,8 @@
 //Define tail function, takes array as param
-const tail = (array) => {
+const tail = (arr) => {
   //Use slice method to move all elements except for array[0] to newArray
-  let newArray = array.slice(1, array.length);
-  return newArray;
+  let newArr = arr.slice(1, arr.length);
+  return newArr;
 };
 
 

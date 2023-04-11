@@ -1,7 +1,7 @@
 //Define head function which takes array as param
-const head = (array) => {
+const head = (arr) => {
   //Return the value in 0 index position of array
-  return array[0];
+  return arr[0];
 };
 
 module.exports = head;

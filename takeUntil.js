@@ -1,3 +1,18 @@
+const takeUntil = function(arr, callback) {
+  const result = [];
+  for (let elm of arr) {
+    if (!callback(elm)) {
+      result.push(elm);
+    } else {
+      return result;
+    }
+  }
+  return result;
+};
+
+module.exports = takeUntil;
+
+
 // const eqArrays = (array1, array2) => {
 //   if (array1.length !== array2.length) return false;
 //   for (let i = 0; i < array1.length; i++) {
@@ -14,25 +29,6 @@
 //   if (assertion === true) console.log(`🟩 🟩 Assertion Passed: ${array1} === ${array2}`);
 //   if (assertion === false) console.log(`🔴 🔴 Assertion Failed: ${array1} !== ${array2}`);
 // };
-
-
-
-
-const takeUntil = function(array, callback) {
-  const result = [];
-  for (let elm of array) {
-    if (!callback(elm)) {
-      result.push(elm);
-    } else {
-      return result;
-    }
-  }
-  return result;
-};
-
-module.exports = takeUntil;
-
-
 
 
 // const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];

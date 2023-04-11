@@ -1,3 +1,14 @@
+const map = (arr, callback) => {
+  const results = [];
+  for (let item of arr) {
+    results.push(callback(item));
+  }
+  return results;
+}
+
+module.exports = map;
+
+
 // const eqArrays = (array1, array2) => {
 //   if (array1.length !== array2.length) return false;
 //   for (let i = 0; i < array1.length; i++) {
@@ -16,16 +27,7 @@
 // };
 
 
-const map = (array, callback) => {
-  const results = [];
-  for (let item of array) {
-    results.push(callback(item));
-  }
-  return results;
-}
 // const words = ["my", "first", "callback", "function", ""];
 // const results1 = map(words, word => word[0]);
 
 // assertArraysEqual(results1, ["m", "f", "c", "f", undefined]);
-
-module.exports = map;
