@@ -1,5 +1,5 @@
 {
-  "name": "vktr-r2",
+  "name": "vktr-r2/lotide",
   "version": "1.0.0",
   "description": "Lotide project for Lighthouse Labs - not for production use",
   "main": "assertArraysEqual.js",
@@ -15,7 +15,7 @@
   },
   "author": {
     "name" : "Viktor R",
-    "email" : "vktr-r2@protonmail.com",
+    "email" : "vktr.r2@protonmail.com",
     "url" : "https://github.com/vktr-r2"
   },
   "license": "ISC",
